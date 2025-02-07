@@ -3238,6 +3238,12 @@ progress {
   font-weight: 500;
 }
 
+.form-label-JHY {
+  margin-bottom: 0.5rem;
+  font-size: 0.7333333333rem;
+  font-weight: 500;
+}
+
 .col-form-label {
   padding-top: calc(0.3125rem + var(--falcon-border-width));
   padding-bottom: calc(0.3125rem + var(--falcon-border-width));
@@ -3270,6 +3276,28 @@ progress {
   width: 100%;
   padding: 0.3125rem 1rem;
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--falcon-gray-900);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--falcon-quaternary-bg);
+  background-clip: padding-box;
+  border: var(--falcon-border-width) solid var(--falcon-gray-300);
+  border-radius: var(--falcon-border-radius);
+  -webkit-box-shadow: var(--falcon-box-shadow-inset);
+  box-shadow: var(--falcon-box-shadow-inset);
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.form-control-JHY {
+  display: block;
+  width: 100%;
+  padding: 0.3125rem 1rem;
+  font-size: 0.7rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--falcon-gray-900);
@@ -3452,6 +3480,32 @@ textarea.form-control-lg {
   width: 100%;
   padding: 0.3125rem 3rem 0.3125rem 1rem;
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--falcon-gray-900);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--falcon-quaternary-bg);
+  background-image: var(--falcon-form-select-bg-img), var(--falcon-form-select-bg-icon, none);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px 12px;
+  border: var(--falcon-border-width) solid var(--falcon-gray-300);
+  border-radius: var(--falcon-border-radius);
+  -webkit-box-shadow: var(--falcon-box-shadow-inset);
+  box-shadow: var(--falcon-box-shadow-inset);
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.form-select-JHY {
+  --falcon-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%234d5969' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  display: block;
+  width: 100%;
+  padding: 0.3125rem 3rem 0.3125rem 1rem;
+  font-size: 0.7rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--falcon-gray-900);
