@@ -158,7 +158,7 @@
                     </div>
                   </div>
                   <!-- parent pages--><a class="nav-link" href="#dashoboard" role="button">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="pie-chart"></span></span><span class="nav-link-text ps-1">Home</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-chart-pie"></span></span><span class="nav-link-text ps-1">Home</span>
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link" href="#" role="button">
@@ -166,7 +166,7 @@
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#membership" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="email">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-people"></span></span><span class="nav-link-text ps-1">회원관리</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-people-fill"></span></span><span class="nav-link-text ps-1">회원관리</span>
                     </div>
                   </a>
                   <ul class="nav collapse" id="membership">
@@ -214,23 +214,23 @@
                     </li>
                   </ul>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#system" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="e-commerce">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-gear"></span></span><span class="nav-link-text ps-1">시스템관리</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-gear-fill"></span></span><span class="nav-link-text ps-1">시스템관리</span>
                     </div>
                   </a>
                   <ul class="nav collapse" id="system">
-                    <li class="nav-item"><a class="nav-link" href="./code_admin.html">
+                    <li class="nav-item"><a class="nav-link" href="./code_admin_list.html">
                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">코드관리</span>
                         </div>
                       </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">
+                    <li class="nav-item"><a class="nav-link" href="./code_group_admin_list.html">
                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">코드그룹관리</span>
                         </div>
                       </a>
                     </li>
                   </ul>
                   <!-- parent pages--><a class="nav-link" href="#" role="button">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-person"></span></span><span class="nav-link-text ps-1">개인정보관리</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-person-fill"></span></span><span class="nav-link-text ps-1">개인정보관리</span>
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#test" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="social">
@@ -2186,51 +2186,74 @@
               <h4 class="mt-4" data-anchor="data-anchor">기본 정보</h4>
             </div>
             <div class="card-body bg-body-tertiary">
-              <form>
-                <div class="mb-3 row g-3">
-                  <div class="col-md-3">
+              <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="col-3">
                     <label class="form-label-JHY" for="code-group">코드그룹 코드<span style="color: red;">*</span></label>
+                  </div>
+                  <div class="col-3">
+                    <label class="form-label-JHY" for="code-group-another">코드그룹 코드 (ANOTHER)</label>
+                  </div>
+                  <div class="col-3">
+                    <label class="form-label-JHY" for="code-group-name">코드그룹 이름<span style="color: red;">*</span></label>
+                  </div>
+                  <div class="col-3">
+                    <label class="form-label-JHY" for="code-group-name-eng">코드그룹 이름 (영문)</label>
+                  </div>
+                </div>
+                <div class="mb-3 row g-3">
+                  <div class="col-3">
                     <input class="form-control-JHY" id="code-group" type="text" placeholder="자동생성" readonly />
                   </div>
-                  <div class="col-md-3">
-                    <label class="form-label-JHY" for="code-group-another">코드그룹 코드 (ANOTHER)</label>
+                  <div class="col-3">
                     <input class="form-control-JHY" id="code-group-another" type="text" placeholder="영대소문자, 숫자" />
                   </div>
-                  <div class="col-md-3">
-                    <label class="form-label-JHY" for="code-group-name">코드그룹 이름<span style="color: red;">*</span></label>
-                    <input class="form-control-JHY" id="code-group-name" type="text" placeholder="한글, 영대소문자, 숫자" />
+                  <div class="col-3">
+                    <input class="form-control-JHY" id="code-group-name" type="text" placeholder="한글, 영대소문자, 숫자" required="" />
+                    <div class="invalid-feedback">Please provide a valid name.</div>
                   </div>
-                  <div class="col-md-3">
-                    <label class="form-label-JHY" for="code-group-name-eng">코드그룹 이름 (영문)</label>
+                  <div class="col-3">
                     <input class="form-control-JHY" id="code-group-name-eng" type="text" placeholder="영대소문자, 숫자" />
                   </div>
                 </div>
-                <div class="mb-3 row g-3">
-                  <div class="col-md-3">
+                <div class="row g-3">
+                  <div class="col-3">
                     <label class="form-label-JHY" for="is-use">사용여부<span style="color: red;">*</span></label>
-                    <select class="form-select-JHY" id="is-use" aria-label="Default select example">
-                      <option value="use">사용</option>
-                      <option value="not-use">미사용</option>
-                    </select>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-3">
                     <label class="form-label-JHY" for="order">순서<span style="color: red;">*</span></label>
-                    <input class="form-control-JHY" id="order " type="text" />
                   </div>
                 </div>
                 <div class="mb-3 row g-3">
-                  <div class="col-md-6">
+                  <div class="col-3">
+                    <select class="form-select-JHY" id="is-use" required="">
+                      <option selected="selected" value="">선택하세요</option>
+                      <option value="use">사용</option>
+                      <option value="not-use">미사용</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a valid state.</div>
+                  </div>
+                  <div class="col-3">
+                    <input class="form-control-JHY" id="order " type="text" required="" />
+                    <div class="invalid-feedback">Please provide a valid order.</div>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-6">
                     <label class="form-label-JHY" for="description">설명</label>
+                  </div>
+                </div>
+                <div class="mb-3 row g-3">
+                  <div class="col-6">
                     <textarea class="form-control-JHY" id="description" rows="3"></textarea>
                   </div>
                 </div>
                 <div class="mb-3 row g-3">
-                  <div class="col-md-3">
-                    <button class="btn btn-outline-dark me-1 mb-1" type="button"><span class="fas fa-list-ul"></span></button>
+                  <div class="col">
+                    <a href="./code_group_admin_list.html"><button class="btn btn-outline-dark" type="button"><span class="fas fa-list-ul"></span></button></a>
                   </div>
-                  <div class="col-md-6"></div>
-                  <div class="col-md-3" style="text-align: right;">
-                    <button class="btn btn-primary" type="button"><span class="fas fa-database"></span></button>
+                  <div class="col" style="text-align: right;">
+                    <button class="btn btn-primary" type="submit"><span class="fas fa-database"></span></button>
                   </div>
                 </div>
               </form>

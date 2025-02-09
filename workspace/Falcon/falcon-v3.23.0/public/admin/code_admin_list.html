@@ -25,6 +25,7 @@
     <meta name="theme-color" content="#ffffff">
     <script src="../assets/js/config.js"></script>
     <script src="../vendors/simplebar/simplebar.min.js"></script>
+    <script src="../vendors/datatables.net-bs5/dataTables.bootstrap5.min.css"></script>
 
 
     <!-- ===============================================-->
@@ -158,7 +159,7 @@
                     </div>
                   </div>
                   <!-- parent pages--><a class="nav-link" href="#dashoboard" role="button">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="pie-chart"></span></span><span class="nav-link-text ps-1">Home</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-chart-pie"></span></span><span class="nav-link-text ps-1">Home</span>
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link" href="#" role="button">
@@ -166,7 +167,7 @@
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#membership" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="email">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-people"></span></span><span class="nav-link-text ps-1">회원관리</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-people-fill"></span></span><span class="nav-link-text ps-1">회원관리</span>
                     </div>
                   </a>
                   <ul class="nav collapse" id="membership">
@@ -214,7 +215,7 @@
                     </li>
                   </ul>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#system" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="e-commerce">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-gear"></span></span><span class="nav-link-text ps-1">시스템관리</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-gear-fill"></span></span><span class="nav-link-text ps-1">시스템관리</span>
                     </div>
                   </a>
                   <ul class="nav collapse" id="system">
@@ -223,14 +224,14 @@
                         </div>
                       </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="./code_group_admin.html">
+                    <li class="nav-item"><a class="nav-link" href="./code_group_admin_list.html">
                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">코드그룹관리</span>
                         </div>
                       </a>
                     </li>
                   </ul>
                   <!-- parent pages--><a class="nav-link" href="#" role="button">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-person"></span></span><span class="nav-link-text ps-1">개인정보관리</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="bi-person-fill"></span></span><span class="nav-link-text ps-1">개인정보관리</span>
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#test" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="social">
@@ -2179,34 +2180,36 @@
             <div class="card-header">
               <div class="mb-2 row g-3">
                 <h1>Code</h1>
-                <div class="col-md-2">
+                <div class="col-4">
                   <select class="form-select-JHY" aria-label="Default select example">
                     <option value="no">N</option>
                     <option value="yes">Y</option>
                   </select>
                 </div>
-                <div class="col-md-2">
+                <div class="col-4">
                   <select class="form-select-JHY" aria-label="Default select example">
                     <option value="yes">Y</option>
                     <option value="no">N</option>
                   </select>
                 </div>
-                <div class="col-md-2">
+              </div>
+              <div class="mb-2 row g-3">
+                <div class="col-4">
                   <select class="form-select-JHY" aria-label="Default select example">
                     <option selected="selected">날짜</option>
                     <option value="resist_date">등록일</option>
                     <option value="modify_date">수정일</option>
                   </select>
                 </div>
-                <div class="col-md-2">
+                <div class="col-4">
                   <input class="form-control-JHY datetimepicker" type="text" placeholder="yy-mm-dd" data-options='{"disableMobile":true}' />
                 </div>
-                <div class="col-md-2">
+                <div class="col-4">
                   <input class="form-control-JHY datetimepicker" type="text" placeholder="yy-mm-dd" data-options='{"disableMobile":true}' />
                 </div>
               </div>
               <div class="mb-5 row g-3">
-                <div class="col-md-2">
+                <div class="col-4">
                   <select class="form-select-JHY" aria-label="Default select example">
                     <option selected="selected">검색구분</option>
                     <option value="no">코드그룹 코드</option>
@@ -2214,32 +2217,25 @@
                     <option value="no">코드그룹 이름(영문)</option>
                   </select>
                 </div>
-                <div class="col-md-2">
+                <div class="col-4">
                   <input class="form-control-JHY" type="text" placeholder="검색어" />
                 </div>
-                <div class="col-md-4">
-                  <button class="btn btn-outline-dark" type="button"><span class="fas fa-search"></span></button>
-                  <button class="btn btn-outline-dark" type="button"><span data-feather="rotate-cw"></span></button>
+                <div class="col-4">
+                  <button class="btn btn-outline-dark btn-sm" type="button"><span class="fas fa-search"></span></button>
+                  <button class="btn btn-outline-dark btn-sm" type="button"><span class="fas fa-redo-alt"></span></button>
                 </div>
+                <div class="col"></div>
+                <div class="col"></div>
               </div>
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-4">
                   <label class="form-label-JHY" for="description">Total: 162</label>
-                </div>
-                <div class="col-md-8"></div>
-                <div class="col-md-2">
-                  <select class="form-select-JHY" aria-label="Default select example">
-                    <option value="no">5</option>
-                    <option value="no">10</option>
-                    <option value="no">15</option>
-                    <option value="no">20</option>
-                  </select>
                 </div>
               </div>
             </div>
             <div class="card-body p-0">
               <div class="table-responsive scrollbar">
-                <table class="table table-sm table-striped fs-11 mb-0 overflow-hidden">
+                <table class="table mb-0 data-table fs-10 align-middle-JHY" data-datatables="data-datatables">
                   <thead class="bg-200">
                     <tr>
                       <th>
@@ -2247,702 +2243,663 @@
                           <input class="form-check-input" id="checkbox-bulk-customers-select" type="checkbox" data-bulk-select='{"body":"table-customers-body","actions":"table-customers-actions","replacedElement":"table-customers-replace-element"}' />
                         </div>
                       </th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-4" data-sort="#">#</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-4" data-sort="use">사용</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap" data-sort="code-group-code">코드그룹 코드</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-5" data-sort="code-group-name" style="min-width: 200px;">코드그룹 이름</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-5" data-sort="code">코드</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-4" data-sort="instead-code">대체 코드</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-4" data-sort="code-name">코드 이름</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-4" data-sort="code-name-eng">코드 이름(영문)</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap" data-sort="order">순서</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-4" data-sort="resist-date">등록일</th>
-                      <th class="text-900 sort pe-1 align-middle-JHY white-space-nowrap ps-5" data-sort="modify-date">수정일</th>
-                      <th class="align-middle-JHY no-sort"></th>
+                      <th class="text-900 sort white-nowrap" data-sort="#">#</th>
+                      <th class="text-900 sort white-nowrap" data-sort="use">사용</th>
+                      <th class="text-900 sort white-nowrap" data-sort="code-group-code">코드그룹 코드</th>
+                      <th class="text-900 sort white-nowrap" data-sort="code-group-name" style="min-width: 200px;">코드그룹 이름</th>
+                      <th class="text-900 sort white-nowrap" data-sort="code">코드</th>
+                      <th class="text-900 sort white-nowrap" data-sort="instead-code">대체 코드</th>
+                      <th class="text-900 sort white-nowrap" data-sort="code-name">코드 이름</th>
+                      <th class="text-900 sort white-nowrap" data-sort="code-name-eng">코드 이름(영문)</th>
+                      <th class="text-900 sort white-nowrap" data-sort="order">순서</th>
+                      <th class="text-900 sort white-nowrap" data-sort="resist-date">등록일</th>
+                      <th class="text-900 sort white-nowrap text-end" data-sort="modify-date">수정일</th>
                     </tr>
                   </thead>
                   <tbody class="list" id="table-customers-body">
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">162</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>162</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">161</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>161</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">160</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>160</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">159</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>159</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">158</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>158</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">157</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>157</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">156</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>156</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">155</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>155</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">154</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>154</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">153</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>153</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">152</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>152</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">151</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>151</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">150</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>150</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">149</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>149</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">148</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>148</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">147</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>147</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">146</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>146</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">145</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>145</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">144</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>144</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">143</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>143</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">142</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>142</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">141</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>141</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">140</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>140</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">139</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>139</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">138</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>138</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">137</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>137</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">136</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>136</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">135</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>135</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">134</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>134</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">133</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>133</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">132</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">381</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">공식홈페이지</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>132</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>381</td>
+                      <td></td>
+                      <td><a href="#">공식홈페이지</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">131</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">42</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.기타사이트유형</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">382</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">기타사이트</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>131</td>
+                      <td>Y</td>
+                      <td>42</td>
+                      <td>작품.기타사이트유형</td>
+                      <td>382</td>
+                      <td></td>
+                      <td><a href="#">기타사이트</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">130</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">372</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">네이버웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">1</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>130</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>372</td>
+                      <td></td>
+                      <td><a href="#">네이버웹툰</a></td>
+                      <td></td>
+                      <td>1</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">129</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">373</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">카카오웹툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">2</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>129</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>373</td>
+                      <td></td>
+                      <td><a href="#">카카오웹툰</a></td>
+                      <td></td>
+                      <td>2</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                     <tr class="btn-reveal-trigger">
-                      <td class="align-middle py-2" style="width: 28px;">
+                      <td>
                         <div class="form-check fs-9 mb-0 d-flex align-items-center">
                           <input class="form-check-input" type="checkbox" id="customer-0" data-bulk-select-row="data-bulk-select-row" />
                         </div>
                       </td>
-                      <td class="# align-middle-JHY white-space-nowrap py-2 ps-4">128</td>
-                      <td class="use align-middle-JHY py-2 ps-4">Y</td>
-                      <td class="code-group-code align-middle-JHY white-space-nowrap py-2">41</td>
-                      <td class="code-group-name align-middle-JHY white-space-nowrap ps-5 py-2">작품.연재사이트</td>
-                      <td class="code align-middle-JHY white-space-nowrap ps-5 py-2">374</td>
-                      <td class="instead-code align-middle-JHY white-space-nowrap ps-4 py-2"></td>
-                      <td class="code-name align-middle-JHY white-space-nowrap ps-4 py-2"><a href="#">버프툰</a></td>
-                      <td class="code-name-eng align-middle-JHY py-2"></td>
-                      <td class="order align-middle-JHY white-space-nowrap py-2">3</td>
-                      <td class="resist-date align-middle-JHY white-space-nowrap py-2 ps-4"></td>
-                      <td class="modify-date align-middle-JHY white-space-nowrap py-2 ps-5"></td>
-                      <td class="align-middle-JHY white-space-nowrap py-2 text-end"></td>
+                      <td>128</td>
+                      <td>Y</td>
+                      <td>41</td>
+                      <td>작품.연재사이트</td>
+                      <td>374</td>
+                      <td></td>
+                      <td><a href="#">버프툰</a></td>
+                      <td></td>
+                      <td>3</td>
+                      <td></td>
+                      <td class="text-end"></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="card-footer d-flex align-items-center justify-content-center">
-              <button class="btn btn-sm btn-falcon-default me-1" type="button" title="Previous" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
-              <ul class="pagination mb-0"></ul>
-              <button class="btn btn-sm btn-falcon-default ms-1" type="button" title="Next" data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
-            </div>
-            <div class="mb-2 row g-3">
-              <div class="col-md-3">
-                <button class="btn btn-outline-dark" type="button"><span class="fas fa-list-ul"></span></button>
+            <div class="mb-2 row g-3 ms-1 me-1">
+              <div class="col">
+                <button class="btn btn-danger btn-sm" type="button"><span class="bi-x"></span></button>
+                <button class="btn btn-danger btn-sm" type="button"><span class="far fa-trash-alt"></span></button>
               </div>
-              <div class="col-md-6"></div>
-              <div class="col-md-3" style="text-align: right;">
-                <button class="btn btn-primary" type="button"><span class="fas fa-database"></span></button>
+              <div class="col" style="text-align: right;">
+                <button class="btn btn-primary btn-sm" type="button">U</button>
+                <button class="btn btn-success btn-sm" type="button"><span class="far fa-file-excel"></span></button>
+                <a href="./code_admin.html"><button class="btn btn-primary btn-sm" type="button"><span class="fas fa-plus"></span></button></a>
               </div>
             </div>
           </div>
@@ -3141,6 +3098,10 @@
     <script src="../vendors/list.js/list.min.js"></script>
     <script src="../assets/js/theme.js"></script>
     <script src="../vendors/flatpickr/flatpickr.min.js"></script>
+    <script src="../vendors/jquery/jquery.min.js"></script>
+    <script src="../vendors/datatables.net/dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs5/dataTables.bootstrap5.min.js"></script>
+    <script src="../vendors/datatables.net-fixedcolumns/dataTables.fixedColumns.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
       feather.replace()
