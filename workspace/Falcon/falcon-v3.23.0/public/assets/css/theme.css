@@ -9699,6 +9699,11 @@ fieldset:disabled .tox .tox-dialog__footer .tox-button--secondary,
   vertical-align: middle !important;
 }
 
+.align-middle-JHY {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
 .align-bottom {
   vertical-align: bottom !important;
 }
