@@ -25,7 +25,6 @@
     <meta name="theme-color" content="#ffffff">
     <script src="../assets/js/config.js"></script>
     <script src="../vendors/simplebar/simplebar.min.js"></script>
-    <script src="../vendors/datatables.net-bs5/dataTables.bootstrap5.min.css"></script>
 
 
     <!-- ===============================================-->
@@ -2228,8 +2227,16 @@
                 <div class="col"></div>
               </div>
               <div class="row">
-                <div class="col-4">
+                <div class="col">
                   <label class="form-label-JHY" for="description">Total: 162</label>
+                </div>
+                <div class="col-2" style="text-align: right;">
+                  <select class="form-select-JHY" aria-label="Default select example">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -2891,6 +2898,11 @@
                 </table>
               </div>
             </div>
+            <div class="card-footer d-flex align-items-center justify-content-center">
+              <button class="btn btn-sm btn-falcon-default me-1" type="button" title="Previous" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
+              <ul class="pagination mb-0"></ul>
+              <button class="btn btn-sm btn-falcon-default ms-1" type="button" title="Next" data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
+            </div>
             <div class="mb-2 row g-3 ms-1 me-1">
               <div class="col">
                 <button class="btn btn-danger btn-sm" type="button"><span class="bi-x"></span></button>
@@ -3098,10 +3110,6 @@
     <script src="../vendors/list.js/list.min.js"></script>
     <script src="../assets/js/theme.js"></script>
     <script src="../vendors/flatpickr/flatpickr.min.js"></script>
-    <script src="../vendors/jquery/jquery.min.js"></script>
-    <script src="../vendors/datatables.net/dataTables.min.js"></script>
-    <script src="../vendors/datatables.net-bs5/dataTables.bootstrap5.min.js"></script>
-    <script src="../vendors/datatables.net-fixedcolumns/dataTables.fixedColumns.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
       feather.replace()
