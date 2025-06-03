@@ -9,10 +9,10 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
-        사용: actions/checkout@v4
-      - 실행: echo "💡 ${{ github.repository }} 저장소가 러너에 복제되었습니다."
-      - 실행: echo "🖥️ 이제 워크플로가 러너에서 코드를 테스트할 준비가 되었습니다."
-      - name: 저장소에 있는 파일 목록
-        실행: |
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
           ls ${{ github.workspace }}
-      - 실행: echo "🍏 이 작업의 상태는 ${{ job.status }}입니다."
+      - run: echo "🍏 This job's status is ${{ job.status }}."
